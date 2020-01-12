@@ -19,6 +19,6 @@ from django.urls import path, include
 # Importei o include, criei minha pasta urls.py dentro da minha aplicação e estou redirecionando
 # os meus paths para o diretório core.urls
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('painel/', admin.site.urls),
     path('', include('core.urls')),
 ]
