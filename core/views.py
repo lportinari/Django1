@@ -19,5 +19,9 @@ def contato(request):
 
 
 def produto(request, pk):
-    print(f'PK: {pk}')
-    return render(request, 'produto.html')
+    prod = Produto.objects.get(id=pk)
+
+    context = {
+        'produto': prod,
+    }
+    return render(request, 'produto.html', context)
