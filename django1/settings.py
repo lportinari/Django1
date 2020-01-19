@@ -120,3 +120,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/' # usado durante o desenvolvimento
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # usado durante a produção
+
+# Quando deslogar da página adminitrativa será redirecionado para a index
+LOGOUT_REDIRECT_URL = 'index'
