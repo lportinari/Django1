@@ -23,9 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'nj4rho_#go_9)nl(e9h$yz&za!5f(*3-!$7)9)vn+^cqo7y$(x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*']  # Aqui entra o domínio, como será publicado gratuitamentte no heroku, não sabemos o domínio que
+# Será publicado
 
 
 # Application definition
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Adicionar a bibilioteca aqui
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -118,8 +120,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/' # usado durante o desenvolvimento
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # usado durante a produção
+STATIC_URL = '/static/'  # usado durante o desenvolvimento
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # usado durante a produção
 
 # Quando deslogar da página adminitrativa será redirecionado para a index
 LOGOUT_REDIRECT_URL = 'index'
