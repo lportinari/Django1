@@ -25,8 +25,8 @@ SECRET_KEY = 'nj4rho_#go_9)nl(e9h$yz&za!5f(*3-!$7)9)vn+^cqo7y$(x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']  # Aqui entra o domínio, como será publicado gratuitamentte no heroku, não sabemos o domínio que
-# Será publicado
+ALLOWED_HOSTS = ['django1-lc.herokuapp.com/']  # Aqui entra o domínio, como será publicado gratuitamentte no heroku,
+# deixamos apenas o *
 
 
 # Application definition
